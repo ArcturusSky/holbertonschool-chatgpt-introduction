@@ -5,12 +5,8 @@ def factorial(n):
     result = 1
     while n > 1:
         result *= n
-        n -= 1  # Decrement n to avoid infinite loop
+        n -= 1  # Decrement n to eventually exit the loop
     return result
-
-if len(sys.argv) < 2:
-    print("Usage: python factorial.py <number>")
-    sys.exit(1)
 
 f = factorial(int(sys.argv[1]))
 print(f)
